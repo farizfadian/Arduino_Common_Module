@@ -6,18 +6,17 @@
 class Led {
 
 	private:
-		int _pin;
+		byte pin;
 	public:
 		Led();
-		Led(int pin);
+		Led(byte pin);
 		~Led();
-		void setPin(int pin);
-		int getPin();
+		void setPin(byte pin);
+		byte getPin();
 		void on();
 		void off();
 		bool isOn();
 		bool isOff();
-		void blink(int repeat, int _delay);
 };
 
 #endif

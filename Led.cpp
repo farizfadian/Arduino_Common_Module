@@ -3,44 +3,35 @@
 Led::Led() {
 }
 
-Led::Led(int pin) {
+Led::Led(byte pin) {
 	setPin(pin);
 }
 
 Led::~Led() {
-	_pin = 0;
+	this->pin = 0;
 }
 
-void Led::setPin(int pin) {
+void Led::setPin(byte pin) {
 	pinMode(pin, OUTPUT);
-	_pin = pin;
+	this->pin = pin;
 }
 
-int Led::getPin() {
-	return _pin;
+byte Led::getPin() {
+	return this->pin;
 }
 
 void Led::on() {
-	digitalWrite(_pin, HIGH);
+	digitalWrite(this->pin, HIGH);
 }
 
 void Led::off() {
-	digitalWrite(_pin, LOW);
+	digitalWrite(this->pin, LOW);
 }
 
 bool Led::isOn() {
-	return digitalRead(_pin) == HIGH;
+	return digitalRead(this->pin) == HIGH;
 }
 
 bool Led::isOff() {
-	return digitalRead(_pin) == LOW;
-}
-
-void Led::blink(int repeat, int _delay) {
-	for(int i = 0; i < repeat; i++) {
-		on();
-		delay(_delay);
-		off();
-		delay(_delay);
-	}
+	return digitalRead(this->pin) == LOW;
 }

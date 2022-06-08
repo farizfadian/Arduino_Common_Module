@@ -1,6 +1,6 @@
 {
   "name": "Arduino_Common_Module",
-  "keywords": "Common Module, LCD, Led, Servo, Ultrasonic",
+  "keywords": "Common Module, LCD, Led, Servo, Ultrasonic, FXCode",
   "description": "A library for common module",
   "repository":
   {
